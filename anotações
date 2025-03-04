@@ -1,8 +1,3 @@
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-
-
 CREATE TABLE `db_cadastra`.`tb_api_coins` (
   `id` VARCHAR(45) NOT NULL,
   `rank` VARCHAR(45) NULL,
@@ -43,15 +38,3 @@ CREATE TABLE `db_cadastra`.`tb_api_markets` (
   `percent_exchange_volume` FLOAT NULL,
   `trades_count24_hr` FLOAT NULL,
   `updated` DATETIME(6) NULL);
-
-
-baixar conector:
-https://dev.mysql.com/downloads/connector/net/
-
-
-venv_cadastra\Scripts\activate
-python -m pip install -r requirements.txt
-
-PS C:\Users\hdsou> cd "F:\VSCODE - Tutoriais\CADASTRA\projeto_cadastra"
-PS F:\VSCODE - Tutoriais\CADASTRA\projeto_cadastra> venv_cadastra\Scripts\activate
-(venv_cadastra) PS F:\VSCODE - Tutoriais\CADASTRA\projeto_cadastra> python agendador.py
