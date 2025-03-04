@@ -1,0 +1,57 @@
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
+
+CREATE TABLE `db_cadastra`.`tb_api_coins` (
+  `id` VARCHAR(45) NOT NULL,
+  `rank` VARCHAR(45) NULL,
+  `symbol` VARCHAR(45) NULL,
+  `name` VARCHAR(255) NULL,
+  `supply` FLOAT NULL,
+  `max_supply` FLOAT NULL,
+  `market_cap_usd` FLOAT NULL,
+  `volume_usd24_hr` FLOAT NULL,
+  `price_usd` FLOAT NULL,
+  `change_percent24_hr` FLOAT NULL,
+  `vwap24_hr` FLOAT NULL,
+  `explorer` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`));
+
+CREATE TABLE `db_cadastra`.`tb_api_exchange` (
+  `exchange_id` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(45) NULL,
+  `rank` VARCHAR(45) NULL,
+  `percent_total_volume` VARCHAR(45) NULL,
+  `volume_usd` VARCHAR(45) NULL,
+  `trading_pairs` VARCHAR(45) NULL,
+  `socket` VARCHAR(45) NULL,
+  `exchange_url` VARCHAR(45) NULL,
+  `updated` DATETIME(6) NULL,
+  PRIMARY KEY (`exchange_id`));
+
+CREATE TABLE `db_cadastra`.`tb_api_markets` (
+  `exchange_id` VARCHAR(45) NOT NULL,
+  `rank` VARCHAR(45) NULL,
+  `base_symbol` VARCHAR(45) NULL,
+  `base_id` VARCHAR(45) NOT NULL,
+  `quote_symbol` VARCHAR(45) NULL,
+  `quote_id` VARCHAR(45) NOT NULL,
+  `price_quote` FLOAT NULL,
+  `price_usd` FLOAT NULL,
+  `volume_usd24_hr` FLOAT NULL,
+  `percent_exchange_volume` FLOAT NULL,
+  `trades_count24_hr` FLOAT NULL,
+  `updated` DATETIME(6) NULL);
+
+
+baixar conector:
+https://dev.mysql.com/downloads/connector/net/
+
+
+venv_cadastra\Scripts\activate
+python -m pip install -r requirements.txt
+
+PS C:\Users\hdsou> cd "F:\VSCODE - Tutoriais\CADASTRA\projeto_cadastra"
+PS F:\VSCODE - Tutoriais\CADASTRA\projeto_cadastra> venv_cadastra\Scripts\activate
+(venv_cadastra) PS F:\VSCODE - Tutoriais\CADASTRA\projeto_cadastra> python agendador.py

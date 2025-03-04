@@ -1,0 +1,9 @@
+requests>=2.32.3
+pandas>=2.1.4
+python-dotenv==1.0.1
+urllib3>=2.1.0
+sqlalchemy
+psycopg2
+mysql-connector-python
+pymysql
+schedule
